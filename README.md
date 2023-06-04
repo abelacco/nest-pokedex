@@ -34,3 +34,17 @@ http://localhost:3001/api/v2/seed
 ## Stack Usado
 *MongoDB
 *Nest
+
+# Production Build
+1. Crear el archivo ```.env.prod```
+2. Llenar las variables de entorno para produccion
+3.Crear la nueva imagen 
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+
+#Notas
+```
+git commit --allow-empty -m "Tigger Heroku Deploy"
+git push heroku <master|main>
+```

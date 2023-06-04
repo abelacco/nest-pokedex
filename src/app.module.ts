@@ -8,6 +8,7 @@ import { SeedModule } from './seed/seed.module';
 import { ConfigModule } from '@nestjs/config';
 import { EnvConfiguration } from './config/app.config';
 import { JoiValidationSchema } from './config/joi.validation';
+import { PokemonpruebaModule } from './pokemonprueba/pokemonprueba.module';
 
 @Module({
   imports: [
@@ -21,7 +22,8 @@ import { JoiValidationSchema } from './config/joi.validation';
     MongooseModule.forRoot(process.env.MONGODB),
     PokemonModule,
     CommonModule,
-    SeedModule
+    SeedModule,
+    PokemonpruebaModule
 
   ],
   controllers: [],
